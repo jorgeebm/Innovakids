@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Noto+Sans:ital@1&family=Nunito:wght@600&family=Signika:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    background: white;
+    color: black;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 1680px;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+/* ----------------  BARRA  ---------------- */
+.header .barra{
+    background: orange;
+    display: flex;
+    align-items: center;
+}
+.header table{
+    width: 100%;
+    /* border: solid gray; */
+}
+.header table tr{
+    display: flex;
+    justify-content: space-around;   
+}
+.header table tr td{
+    display:flex;
+    align-items: center;
+    color: white;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.header table td img{
+    width: 25px;
+    padding: 6px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* ----------------  MENU  ---------------- */
+.header .menu{
+    position: relative;
+    /* box-shadow: 2px 0px 2px rgb(0, 0, 0, .25); */
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    background: white;
+}
+.header .menu .logo{
+    width: 120px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+.header .menu .logo img{
+    width: 80px;
+    margin-left: 25px;
+}
+.header .menu .btnMenu {
+    outline:none;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    right: 5px;
+    z-index: 10;
+    background: red;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-family: 'Baloo Chettan 2', cursive;
+    font-size: 15px;
+    visibility: hidden;
+}
+.header .menu .btnMenu:hover{
+    transform: scale(1.03,1.03);
+}
+.header .menu .elementos{
+    position: relative;
+    width: 80%;
+    margin-left: 20%;
+}
+.header .menu .elementos ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-family: 'Baloo Chettan 2', cursive;
+
+}
+.header .menu .elementos li a{
+    display: block;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    margin: 0px 14px;
+}
+.header .menu .elementos li :hover{
+    /* background:rgba(189, 189, 189, 0.651); */
+    text-decoration: underline orange;
+}
+.nav_fixed .menu{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    max-width: 1680px;
+    z-index: 90;
+    transition: 2s;
+}
+.header .logoImg .logo img{
+    width: 40px;
+}
+/* ----------------  SLIDER  ---------------- */
+
+.contenedor .slider{
+    position: relative;
+}
+
+.contenedor .slider .elemSlider ul, ol{
+    list-style: none;
+}
+.contenedor .slider ol li span{
+    padding: 5px;
+}
+.contenedor .slider .elemSlider li section{         /*Ocultamos letras del slider*/
+    display: none;
+}
+.contenedor .slider .elemSlider li, ul{
+    width: 100%;
+    list-style: none;
+}
+
+.contenedor .slider .elemSlider li img{
+    max-width: 100%;
+}
+
+.contenedor .slider .texto{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 0;
+    left: 0;
+    padding: 15px 50px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: white;
+}
+
+.contenedor .slider .texto h1{
+    font-size: 50px;
+}
+
+.contenedor .slider .texto p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.contenedor .slider .paginacion{
+    position: absolute;
+    top: 85%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.contenedor .slider .paginacion li{
+    cursor: pointer;
+    font-size: 45px;
+    margin-right: 5px;
+    color: black;
+}
+
+.contenedor .slider .izq, .der{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 2;
+    cursor: pointer;
+}
+.contenedor .slider .der img{
+    width: 40px;
+}
+.contenedor .slider .izq img{
+    width: 40px;
+}
+.contenedor .slider .izq{
+    left: .5px;
+}
+
+.contenedor .slider .der{
+    right: .5px;
+}
+.contenedor .slider .izq span :hover{
+    background: rgba(133, 132, 132, 0.712);
+    border-radius: 0 5px 5px 0;
+    padding: 4px 0 4px 0;
+}
+.contenedor .slider .der span :hover{
+    background: rgba(133, 132, 132, 0.712);
+    border-radius: 5px 0 0 5px;
+    padding: 4px 0 4px 0;
+}
+/* ----------------  PRODUCTOS  ---------------- */
+    /* ........  LIBROS  ........ */
+.contenedor .productos .libros{
+    padding: 0 15px 0 20px;
+}
+.contenedor .productos .libros .encabezado p{
+    font-family: 'Baloo Chettan 2', cursive;
+    color: rgb(124, 124, 124);
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: .5px;
+}
+.contenedor .productos .libros .encabezado h2{
+    font-size: 30px;
+    font-family: 'Nunito', sans-serif;
+    /* color: rgb(124, 124, 124); */
+}
+.contenedor .productos .libros .contenido table{
+    width: 100%;
+}
+.contenedor .productos .libros .contenido tr{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 55px 0;
+    /* background: rosybrown; */
+}
+.contenedor .productos .libros .contenido td{
+    width: 48%;
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;  
+}
+.contenedor .productos .libros .contenido td img{
+    padding: 20px;
+    border-radius: 50%;
+    background: orange;
+    /* width: 35px; */
+    height: 40px;
+}
+.contenedor .productos .libros .contenido td div{
+    width: 60%;
+}
+.contenedor .productos .libros .contenido td div a{
+    font-family: 'Baloo Chettan 2', cursive;
+    color: rgb(124, 124, 124);
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: .5px;
+}
+.contenedor .productos .libros .contenido td div a :hover{
+    color: rgb(214, 151, 68);
+    text-decoration: underline;
+}
+.contenedor .productos .libros .contenido td div h3{
+    font-family: 'Nunito', sans-serif;  
+    color: black; 
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+    /* ........  BIENVENIDA  ........ */
+.contenedor .productos .bienvenida{
+    margin: 0 40px 0 10px;
+}
+.contenedor .productos .bienvenida h2{
+    font-family: 'Nunito', sans-serif;
+    font-size: 32px;
+    line-height: 50px;
+    letter-spacing: 1.5px;
+}
+.contenedor .productos .bienvenida h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+}
+.contenedor .productos .bienvenida p{
+    font-family: 'Baloo Chettan 2', cursive;
+    color: rgb(124, 124, 124);
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: .5px;
+    margin-top: 10px;
+}
+.contenedor .productos .bienvenida button{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    background: orange;
+    border-radius: 30px;
+    border: none;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* ----------------  PROMOCION  ---------------- */
+.contenedor .promocion{
+    display: flex;
+    align-items: center;
+}
+.contenedor .promocion img{
+    max-width: 100%;
+}
+.contenedor .promocion button{
+    position: absolute;
+    right: 50px;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    background: orange;
+    border-radius: 30px;
+    border: none;
+    padding: 15px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.contenedor .promocion a :hover{
+    box-shadow: 0 0 5px rgba(255, 187, 0, 0.521);
+    transform: scale(1.01,1.01);
+}
+
+/* ----------------  OPINIONES  ---------------- */
+.opiniones{
+    text-align: center;
+    position: relative;
+}
+.opiniones h1{
+    font-family: 'Signika', sans-serif;
+    font-size:40px;
+    color: orange;
+}
+.opiniones h2{
+    font-family: 'Signika', sans-serif;
+    font-size: 40px;
+    color: cornflowerblue;
+}
+
+.contenedor .opiniones .elemSliderOp .comillas{
+    position: absolute;
+    width: 60px;
+    border-radius: 0;
+    z-index: 1;
+    opacity: 10%;
+    top: 150px;
+    left: 470px;
+}
+.contenedor .opiniones .elemSliderOp{
+    padding-bottom: 50px;
+}
+.contenedor .opiniones .elemSliderOp ul, ol{
+    list-style: none;
+}
+.contenedor .opiniones ol li span{
+    padding: 5px;
+}
+/* .contenedor .opiniones .elemSlider li section{         Ocultamos letras del slider
+    display: none;
+} */
+.contenedor .opiniones .elemSliderOp li, ul{
+    width: 99.8%;
+    list-style: none;
+}
+.contenedor .opiniones .elemSliderOp li{
+    height: 250px;
+    list-style: none;
+    /* border: solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .opiniones .elemSliderOp li img{
+    width: 120px;
+    border-radius: 50%;
+}
+
+.contenedor .opiniones .texto{
+    width: 32%;
+    padding: 15px 50px 0 50px;
+    z-index: 2;
+    color: black;
+    text-align: left;
+}
+
+.contenedor .opiniones .texto .opinio{
+    font-size: 17px;
+    font-family: 'Noto Sans', sans-serif;
+    margin-bottom: 15px;
+    line-height: 25px;
+
+}
+.contenedor .opiniones .texto .nombre{
+    font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.contenedor .opiniones .texto .m_p{
+    font-size: 15px;
+    font-family: 'Noto Sans', sans-serif;
+    color: orange;
+}
+
+.contenedor .opiniones .paginacionOp{
+    position: absolute;
+    top: 90%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.contenedor .opiniones .paginacionOp li{
+    cursor: pointer;
+    font-size: 35px;
+    margin-right: 5px;
+    color: black;
+}
+
+/* .contenedor .opiniones .izqOp, .derOp{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+    background: red;
+    top: 55%;
+} */
+/* .contenedor .opiniones .derOp img{
+    width: 40px;
+} */
+/* .contenedor .opiniones .izqOp img{
+    width: 40px;
+} */
+/* .contenedor .opiniones .izqOp{
+    left: .5px;
+} */
+
+/* .contenedor .opiniones .derOp{
+    right: .5px;
+}
+.contenedor .opiniones .izqOp span :hover{
+    background: rgba(133, 132, 132, 0.712);
+    border-radius: 0 5px 5px 0;
+    padding: 4px 0 4px 0;
+}
+.contenedor .opiniones .derOp span :hover{
+    background: rgba(133, 132, 132, 0.712);
+    border-radius: 5px 0 0 5px;
+    padding: 4px 0 4px 0;
+} */
+/* ----------------  FOTOS  ---------------- */
+.contenedor .fotos{
+    max-width: 100%;
+}
+.contenedor .fotos img{
+    width: 100%;
+}
+
+/* ----------------  INFORMACION  ---------------- */
+
+.contenedor .informacion{
+    margin-top: -70PX;
+    background: rgb(83, 83, 83); 
+    color: white;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+.contenedor .informacion >div{
+    /* background: rgb(0, 0, 0); */
+    text-align: left;  
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 20px;
+}
+.contenedor .informacion div h1{
+    font-size: 16px;
+    padding-bottom: 30px;
+    text-decoration: underline;
+}
+.contenedor .informacion div{
+    font-size: 15px;
+    color: white;
+}
+.contenedor .informacion div a{
+    font-size: 15px;
+    color: white;
+}
+.contenedor .informacion div div :hover{
+    color: rgb(156, 155, 155);
+}
+.contenedor .informacion .siguenos{
+    margin-top: 10%;
+    /* background: red; */
+}
+.contenedor .informacion .siguenos div{
+    display: flex;
+    justify-content: space-between;
+}
